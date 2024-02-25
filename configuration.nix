@@ -106,29 +106,29 @@
     kwrited
   ];
   # Dynamic Triple Buffering For GNOME
-  # nixpkgs.overlays = [
-  # (final: prev: {
-  #     gnome = prev.gnome.overrideScope' (gnomeFinal: gnomePrev: {
-  #       mutter = gnomePrev.mutter.overrideAttrs ( old: {
-  #         src = pkgs.fetchgit {
-  #           url = "https://gitlab.gnome.org/vanvugt/mutter.git";
-  #           # GNOME 45: triple-buffering-v4-45
-  #           rev = "0b896518b2028d9c4d6ea44806d093fd33793689";
-  #           sha256 = "sha256-mzNy5GPlB2qkI2KEAErJQzO//uo8yO0kPQUwvGDwR4w=";
-  #         };
-  #       });
-  #     });
-  #   })
-  #   (import (builtins.fetchTarball {
-  #     url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-  #   }))
-  #   (self: super: {
-  #     neovim = super.neovim.override {
-  #       viAlias = true;
-  #       vimAlias = true;
-  #     };
-  #   })
-  # ];
+  nixpkgs.overlays = [
+  (final: prev: {
+      gnome = prev.gnome.overrideScope' (gnomeFinal: gnomePrev: {
+        mutter = gnomePrev.mutter.overrideAttrs ( old: {
+          src = pkgs.fetchgit {
+            url = "https://gitlab.gnome.org/vanvugt/mutter.git";
+            # GNOME 45: triple-buffering-v4-45
+            rev = "0b896518b2028d9c4d6ea44806d093fd33793689";
+            sha256 = "sha256-mzNy5GPlB2qkI2KEAErJQzO//uo8yO0kPQUwvGDwR4w=";
+          };
+        });
+      });
+    })
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+    }))
+    (self: super: {
+      neovim = super.neovim.override {
+        viAlias = true;
+        vimAlias = true;
+      };
+    })
+  ];
   # GNOME workaround
   # systemd.services."getty@tty1".enable = false;
   # systemd.services."autov@tty1".enable = false;
@@ -160,7 +160,7 @@
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     shellAliases = {
       ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo /etc/nixos/rebuild_switch.sh";
     };
   };
   users.defaultUserShell = pkgs.zsh;
