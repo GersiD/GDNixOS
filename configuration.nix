@@ -172,6 +172,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       ripgrep
+      fd
       firefox
       alacritty
       gnome.gnome-tweaks
