@@ -9,5 +9,5 @@ echo "Pushing to git..."
 gen=$(nixos-rebuild --fast list-generations | head -n 1 | awk '{print $1}')
 echo "Generation: $gen"
 sudo git commit -am "NixOS Rebuild: $gen"
-sudo git push -u origin main
+git push -u origin main
 popd
