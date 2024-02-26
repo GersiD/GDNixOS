@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-pushd /etc/nixos/
 set -e
+pushd /etc/nixos/
 git --no-pager diff *.nix
 echo "NixOS Rebuilding Switch..."
-sudo nixos-rebuild switch >nixos-switch.log || (sudo cat nixos-switch.log | grep --color error && false)
-gen=$(nixos-rebuild list-generations | grep current)
+sudo nixos-rebuild switch >nixos-switch.log
+(cat nixos-switch.log | grep --color error) && false
 echo "Pushing to git..."
+gen=$(nixos-rebuild --fast list-generations | head -n 1 | awk '{print $1}')
+echo "Generation: $gen"
 sudo git commit -am "NixOS Rebuild: $gen"
-git push -u origin main
+sudo git push -u origin main
 popd
