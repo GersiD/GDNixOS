@@ -160,7 +160,7 @@
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     shellAliases = {
       ll = "ls -l";
-      update = "sudo /etc/nixos/rebuild_switch.sh";
+      update = "sudo bash /etc/nixos/rebuild_switch.sh";
     };
   };
   users.defaultUserShell = pkgs.zsh;
