@@ -171,6 +171,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      playerctl
       ripgrep
       fd
       firefox
