@@ -136,8 +136,8 @@
     })
   ];
   # GNOME workaround
-  # systemd.services."getty@tty1".enable = false;
-  # systemd.services."autov@tty1".enable = false;
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autov@tty1".enable = false;
   # For systray icons
   # services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon  ];
 
