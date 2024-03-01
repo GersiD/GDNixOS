@@ -89,7 +89,7 @@
     opengl.enable = true;
     nvidia.modesetting.enable = true;
   };
-  xdg.portal.enable = true;
+  xdg.portal.enable = false;
 # END HYPRLAND
 
   # Exclude some packages from the GNOME Desktop Environment.
