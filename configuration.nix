@@ -70,8 +70,8 @@
     # Enable touchpad support (enabled default in most desktopManager).
     # libinput.enable = true;
     # Key repeat settings
-    autoRepeatDelay = 20;
-    autoRepeatInterval = 20;
+    # autoRepeatDelay = 20;
+    # autoRepeatInterval = 20;
   };
   # Many DEs require dconf for some reason
   programs.dconf.enable = true;
@@ -139,7 +139,7 @@
   # systemd.services."getty@tty1".enable = false;
   # systemd.services."autov@tty1".enable = false;
   # For systray icons
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon  ];
+  # services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon  ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
