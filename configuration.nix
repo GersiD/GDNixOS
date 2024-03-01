@@ -66,6 +66,7 @@
       defaultSession = "hyprland";
     };
     desktopManager.gnome.enable = true;
+    desktopManager.runXdgAutostartIfNone = true;
     # desktopManager.plasma5.enable = true;
     # Enable touchpad support (enabled default in most desktopManager).
     # libinput.enable = true;
@@ -83,6 +84,7 @@
     xwayland.enable = true;
   };
   environment.sessionVariables = {
+    # FIXME: remove when https://github.com/nix-community/home-manager/issues/4486 is fixed
     NIXOS_OZONE_WL = "1";
   };
   hardware = {
@@ -91,6 +93,8 @@
   };
   xdg.portal = {
     enable = true;
+    # See https://github.com/NixOS/nixpkgs/issues/239886
+    # Enable xdg-desktop-portal-gtk unless we already have it from Gnome DE
     extraPortals = lib.optionals(!config.services.xserver.desktopManager.gnome.enable) [ pkgs.xdg-desktop-portal-gtk ];
   };
 # END HYPRLAND
