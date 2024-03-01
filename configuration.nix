@@ -65,7 +65,7 @@
       };
       defaultSession = "hyprland";
     };
-    desktopManager.gnome.enable = true;
+    # desktopManager.gnome.enable = true;
     # desktopManager.plasma5.enable = true;
     # Enable touchpad support (enabled default in most desktopManager).
     # libinput.enable = true;
