@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -89,7 +89,10 @@
     opengl.enable = true;
     nvidia.modesetting.enable = true;
   };
-  xdg.portal.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = lib.optionals(!config.services.xserver.desktopManager.gnome.enable) [ pkgs.xdg-desktop-portal-gtk ];
+  };
 # END HYPRLAND
 
   # Exclude some packages from the GNOME Desktop Environment.
