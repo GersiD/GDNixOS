@@ -186,6 +186,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      home-manager
       wl-clipboard
       discord
       mako
