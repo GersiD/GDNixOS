@@ -189,8 +189,6 @@
       fd
       firefox
       alacritty
-      waybar
-      hyprland
       gnome.gnome-tweaks
       gradience
       kate
@@ -226,6 +224,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      zsh
+     waybar
+     hyprland
      fzf
      neovim-nightly
      git
