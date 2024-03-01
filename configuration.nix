@@ -16,6 +16,9 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.default = "saved";
 
+  # Security options
+  security.sudo.wheelNeedsPassword = false;
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "Timber"; # Define your hostname.

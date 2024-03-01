@@ -5,7 +5,7 @@ echo "NixOS Rebuilding Switch..."
 sudo nixos-rebuild switch &>./nixos-switch.log
 (cat nixos-switch.log | grep --color error)
 if [ $? -eq 0 ]; then
-  echo "NixOS Rebuild failed. Check nixos-switch.log"
+  echo "NixOS Rebuild failed."
   exit 1
 fi
 echo "Pushing to git..."
