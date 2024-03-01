@@ -93,24 +93,24 @@
 # END HYPRLAND
 
   # Exclude some packages from the GNOME Desktop Environment.
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-photos
-    gnome-tour
-    gnome.cheese
-    gnome.gnome-music
-    gnome.geary
-    gnome.tali
-    gnome.iagno
-    gnome.hitori
-    gnome.atomix
-  ];
+  # environment.gnome.excludePackages = with pkgs; [
+  #   gnome-photos
+  #   gnome-tour
+  #   gnome.cheese
+  #   gnome.gnome-music
+  #   gnome.geary
+  #   gnome.tali
+  #   gnome.iagno
+  #   gnome.hitori
+  #   gnome.atomix
+  # ];
   # Exclude some packages from the KDE Plasma Desktop Environment.
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    konsole
-    oxygen
-    plasma-browser-integration
-    kwrited
-  ];
+  # environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  #   konsole
+  #   oxygen
+  #   plasma-browser-integration
+  #   kwrited
+  # ];
   # Dynamic Triple Buffering For GNOME
   nixpkgs.overlays = [
   # (final: prev: {
