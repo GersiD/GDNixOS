@@ -16,6 +16,8 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.default = "saved";
 
+  # Enable Nix Flakes
+  # nix.settings.experimental-features = ["nix-command" "flakes"];
   # Security options
   security.sudo.wheelNeedsPassword = false;
 
