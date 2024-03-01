@@ -178,6 +178,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      libnotify
       dolphin
       rofi
       wev
