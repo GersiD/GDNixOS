@@ -233,7 +233,7 @@
      gnumake
      gnomeExtensions.appindicator
      gnomeExtensions.just-perfection
-     gnomeExtensions.dash-to-dock
+     # gnomeExtensions.dash-to-dock # IS THIS WHAT IS CAUSING MY GNOME TO START TWICE?
      gnomeExtensions.arc-menu
   ];
   environment.shells = with pkgs; [
