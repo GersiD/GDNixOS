@@ -60,7 +60,7 @@
       # sddm.enable = true;
       # Enable automatic login for the user.
       autoLogin = {
-        enable = false;
+        enable = true;
         user = "gd";
       };
       defaultSession = "hyprland";
