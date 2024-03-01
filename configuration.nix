@@ -178,8 +178,8 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      mako
       libnotify
-      dolphin
       rofi
       wev
       swww
