@@ -173,6 +173,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      thunar
       dolphin
       rofi
       wev
