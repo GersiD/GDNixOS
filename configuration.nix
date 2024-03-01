@@ -56,7 +56,7 @@
       # Enable the GNOME Desktop Environment.
       gdm.enable = true;
       gdm.wayland = true;
-      gdm.autoLogin.delay = 2;
+      # gdm.autoLogin.delay = 2; # Useful if the double desktop problem occurs
       # Enable the KDE Plasma Desktop Environment.
       # sddm.enable = true;
       # Enable automatic login for the user.
