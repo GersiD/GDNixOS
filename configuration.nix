@@ -66,6 +66,9 @@
     # desktopManager.plasma5.enable = true;
     # Enable touchpad support (enabled default in most desktopManager).
     # libinput.enable = true;
+    # Key repeat settings
+    autoRepeatDelay = 20;
+    autoRepeatInterval = 20;
   };
   # Many DEs require dconf for some reason
   programs.dconf.enable = true;
@@ -160,7 +163,6 @@
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     shellAliases = {
       ll = "ls -l";
-      update = "sudo bash /etc/nixos/rebuild_switch.sh";
     };
   };
   users.defaultUserShell = pkgs.zsh;
@@ -171,6 +173,9 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      dolphin
+      rofi
+      wev
       swww
       playerctl
       ripgrep
