@@ -56,6 +56,7 @@
       # Enable the GNOME Desktop Environment.
       gdm.enable = true;
       gdm.wayland = true;
+      gdm.autoLogin.delay = 2;
       # Enable the KDE Plasma Desktop Environment.
       # sddm.enable = true;
       # Enable automatic login for the user.
@@ -65,7 +66,7 @@
       };
       defaultSession = "hyprland";
     };
-    desktopManager.gnome.enable = false;
+    desktopManager.gnome.enable = true;
     desktopManager.runXdgAutostartIfNone = true;
     # desktopManager.plasma5.enable = true;
     # Enable touchpad support (enabled default in most desktopManager).
