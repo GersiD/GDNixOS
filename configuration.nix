@@ -89,6 +89,8 @@
   environment.sessionVariables = {
     # FIXME: remove when https://github.com/nix-community/home-manager/issues/4486 is fixed
     NIXOS_OZONE_WL = "1";
+
+    WLR_NO_HARDWARE_CURSORS = "1";
   };
   hardware = {
     opengl.enable = true;
