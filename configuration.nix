@@ -189,6 +189,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      pywal
       home-manager
       wl-clipboard
       discord
