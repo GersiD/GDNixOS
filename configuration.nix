@@ -235,22 +235,26 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.packageOverrides = pkgs: {
+    unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     zsh
-     waybar
-     hyprland
-     fzf
-     neovim-nightly
-     git
-     stow
-     gnumake
-     gnomeExtensions.appindicator
-     gnomeExtensions.just-perfection
-     # gnomeExtensions.dash-to-dock
-     gnomeExtensions.arc-menu
+    unstable.hyprlock
+    zsh
+    waybar
+    hyprland
+    fzf
+    neovim-nightly
+    git
+    stow
+    gnumake
+    gnomeExtensions.appindicator
+    gnomeExtensions.just-perfection
+    # gnomeExtensions.dash-to-dock
+    gnomeExtensions.arc-menu
   ];
   environment.shells = with pkgs; [
     zsh
