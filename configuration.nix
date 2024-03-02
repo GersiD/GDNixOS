@@ -203,7 +203,6 @@
       ripgrep
       fd
       firefox
-      alacritty
       gnome.gnome-tweaks
       gradience
       kate
