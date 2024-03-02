@@ -189,6 +189,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      kitty
       pywal
       home-manager
       wl-clipboard
