@@ -86,6 +86,10 @@
     enableNvidiaPatches = true;
     xwayland.enable = true;
   };
+  # programs.hyprlock = {
+  #   enable = true;
+  #   enableNvidiaPatches = true;
+  # };
   environment.sessionVariables = {
     # FIXME: remove when https://github.com/nix-community/home-manager/issues/4486 is fixed
     NIXOS_OZONE_WL = "1";
@@ -235,14 +239,11 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.packageOverrides = pkgs: {
-    unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
-  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    unstable.hyprlock
+    # hyprlock
     zsh
     waybar
     hyprland
@@ -285,5 +286,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "unstable"; # Did you read the comment?
 }
