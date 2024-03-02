@@ -83,7 +83,7 @@
 # BEGIN HYPRLAND
   programs.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
+    # enableNvidiaPatches = true; # Might be neccecary?
     xwayland.enable = true;
   };
   # programs.hyprlock = {
@@ -243,7 +243,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # hyprlock
+    hyprlock
     zsh
     waybar
     hyprland
