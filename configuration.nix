@@ -181,6 +181,7 @@
   users.defaultUserShell = pkgs.zsh;
 
   programs.thunar.enable = true;
+  # programs.hyprlock.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gd = {
