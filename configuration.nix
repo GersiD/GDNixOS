@@ -195,6 +195,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      zotero
       kitty
       pywal
       home-manager
