@@ -195,7 +195,6 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      iwd
       kitty
       pywal
       home-manager
