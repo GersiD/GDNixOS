@@ -227,7 +227,6 @@
       llvmPackages_16.bintools
       tmux
       unzip
-      neofetch
       fastfetch
     ];
     shell = pkgs.zsh;
