@@ -228,6 +228,7 @@
       tmux
       unzip
       neofetch
+      fastfetch
     ];
     shell = pkgs.zsh;
   };
