@@ -195,7 +195,8 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      android-studio
+      slurp # Screenshot tool
+      grim # Screenshot tool
       zotero
       kitty
       pywal
