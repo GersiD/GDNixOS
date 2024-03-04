@@ -195,6 +195,7 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      android-file-transfer
       slurp # Screenshot tool
       grim # Screenshot tool
       zotero
