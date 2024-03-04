@@ -195,7 +195,6 @@
     description = "gd";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      go-mtpfs
       slurp # Screenshot tool
       grim # Screenshot tool
       zotero
